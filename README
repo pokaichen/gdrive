@@ -1,0 +1,19 @@
+Upload files to Google Drive.
+gdrive.py contains the APIs for Google Drive
+backup.py packages the files then calls gdrive.py
+
+FIRST TIME ONLY
+1) Before using, you need a valid credentials file from Google.
+- https://console.developers.google.com/ -> Credentials
+- Create credentials -> OAuth client ID -> Other
+- Download the credentials file, and update gdrive.py:CREDENTIALS_FILE
+
+2) Update backup.py:BACKUP_DIR and backup.py:GDRIVE_FOLDER. All folders in BACKUP_DIR
+will be zipped and sent to GDRIVE_FOLDER.
+
+3) On first run, browser will open up asking you to signin and link your google account.
+This information will be cached at gdrive.py:CLIENT_SECRETS.
+Subsequent runs will load the client secretes from this cached file.
+
+SUBSEQUENT BACKUPS
+Just do step 2.
